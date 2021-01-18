@@ -1,28 +1,44 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import firebase from '@/firebase'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+  },
+  data(){
+    return {}
+  },
+  computed: {
+    // isLoggedIn() {
+    //   // return (this.$store.state.user.length == 0) ? true : false
+    //   return this.$store.state.isLoggedIn
+    // }, 
+    // user () {
+    //   return this.$store.state.user
+    // },
+  },
+  watch: {
+    // isLoggedIn(){
+    //   firebase.auth().onAuthStateChanged(function(user) {
+    //     if (user) {
+    //       this.isLoggedIn = true
+    //       // User is signed in.
+    //     } else {
+    //       this.isLoggedIn = false
+    //       // No user is signed in.
+    //     }
+    //   });
+    // }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
